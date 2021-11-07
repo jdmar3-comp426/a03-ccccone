@@ -30,11 +30,11 @@ export function getMedian(array) {
     let len = array.length;
     let median;
     if (len%2 == 0) {
-        median = array[length/2-1];
-        median += array[length/2];
+        median = array[len/2-1];
+        median += array[len/2];
         median /= 2;
     } else {
-        median = array[length/2];
+        median = array[len/2];
     }
     return median;
 }
