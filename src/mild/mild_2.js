@@ -106,5 +106,9 @@ export function removeKeyNonDestructive(object, key) {
  * @return {*} The object with its keys removed.
  */
 export function removeKeys(object, keyList) {
-
+   for (const[key, value] of Object.entries(object)) {
+      if (key in keyList) {
+         delete object[key];
+      }
+   }
 }
