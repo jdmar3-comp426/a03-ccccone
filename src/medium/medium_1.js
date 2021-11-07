@@ -36,6 +36,7 @@ export function getMedian(array) {
     } else {
         median = array[len/2];
     }
+    console.log(array);
     console.log(median);
     return median;
 }
