@@ -65,5 +65,5 @@ export function countArray(array) {
             ret.set(array[i], 1);
         }
     }
-    return ret;
+    return Object.fromEntries(ret);
 }
