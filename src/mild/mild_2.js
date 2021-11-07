@@ -75,7 +75,13 @@ export function removeKey(object, key) {
  If only `removeKeyNonDestructive` was called, nothing would have changed.
  */
 export function removeKeyNonDestructive(object, key) {
-
+   let obj = {};
+   for (const [curkey, value] of Object.entries(object)) {
+      if (curkey != key) {
+         obj[curkey] = value;
+      }
+   }
+   return obj;
 }
 
 /**
