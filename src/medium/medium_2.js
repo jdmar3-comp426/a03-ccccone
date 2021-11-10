@@ -21,7 +21,7 @@ see under the methods section
  */
 export const allCarStats = {
     avgMpg: avgMpgCal(mpg_data),
-    allYearStats: getStatistics(mpg_data),
+    allYearStats: allYearsCal(mpg_data),
     ratioHybrids: hybridsCal(mpg_data),
 };
 
@@ -36,6 +36,14 @@ function avgMpgCal(mpg_data){
     ret.city = totalCityMpg/mpg_data.length;
     ret.highway = totalHighwayMpg/mpg_data.length;
     return ret;
+}
+
+function allYearsCal(mpg_data){
+    let years = [];
+    for (let i = 0; i < mpg_data.length; i++) {
+        years.push(mpg_data[i].year);
+    }
+    return getStatistics(years);
 }
 
 function hybridsCal(mpg_data){
