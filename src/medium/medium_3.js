@@ -87,7 +87,7 @@ export function searchName(car_data, searchTerm) {
  */
 export function searchByYear(car_data, years) {
     let candidates = car_data.reduce(function(acc, obj) {
-        if (obj.yesr = years) {
+        if (obj.yesr == years) {
             acc.push(obj);
         }
         return acc;
