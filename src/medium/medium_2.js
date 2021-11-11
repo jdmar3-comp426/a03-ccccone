@@ -193,5 +193,5 @@ function avgMpgByYearAndHybridCal(mpg_data){
         sum[key] = Object.assign(sumOrder, value);
 
     }
-    return ret;
+    return sum;
 }
