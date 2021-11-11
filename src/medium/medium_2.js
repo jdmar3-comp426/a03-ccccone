@@ -168,7 +168,10 @@ function avgMpgByYearAndHybridCal(mpg_data){
         return acc;
     }, {});
 
-
+    let sumOrder = {
+        'hybrid': null,
+        'notHybrid': null,
+    }
     for (const [key, value] of Object.entries(sum)) {
         if (value.hybrid) {
             if (value.hybrid.city) {
@@ -187,12 +190,8 @@ function avgMpgByYearAndHybridCal(mpg_data){
                 value.notHybrid.highway = value.notHybrid.highway.reduce((a, b) => a + b, 0)/value.notHybrid.highway.length;
             }
         }
-    }
-    let sumOrder = {
-        'hybrid': null,
-        'notHybrid': null,
-    }
+        sum[key] = Object.assign(sumOrder, value);
 
-    let ret = Object.assign(sumOrder, sum);
+    }
     return ret;
 }
