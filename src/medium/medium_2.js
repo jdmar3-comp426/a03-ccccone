@@ -188,5 +188,11 @@ function avgMpgByYearAndHybridCal(mpg_data){
             }
         }
     }
-    return sum;
+    let sumOrder = {
+        'hybrid': null,
+        'notHybrid': null,
+    }
+
+    ret = Object.assign(sumOrder, sum);
+    return ret;
 }
