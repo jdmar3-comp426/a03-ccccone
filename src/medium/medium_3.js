@@ -22,6 +22,7 @@ export function searchHighPower(car_data, minHorsepower, minTorque) {
         if (obj.horsepower >= minHorsepower && obj.torque >= minTorque) {
             acc.push(obj);
         }
+        return acc;
     }, []);
     candidates.sort(function(a, b) {
         return b.horsepower - a.horsepower;
