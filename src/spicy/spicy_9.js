@@ -159,7 +159,14 @@ export const someEven = (arr, test) => {
  *       -->  { pass: [1, 5, 31], fail: [90] }
  */
 export const filter = (arr, test) => {
-
+    let ret = {fail:[], pass:[]};
+    for (let i = 0; i < arr.length; i++) {
+        if (test(arr[i])) {
+            ret.pass.push(arr[i]);
+        } else {
+            ret.fail.push(arr[i]);
+        }
+    }
 };
 
 
