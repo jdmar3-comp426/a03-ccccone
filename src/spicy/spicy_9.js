@@ -17,13 +17,12 @@
 export const repeat = (fn, n, ...params) => {
     let ret = [];
 
-    for (let i = 0; i <= n; i++) {
+    for (let i = 0; i < n; i++) {
         ret.push(fn(...params));
     }
 
     return ret;
 };
-
 
 /**
  * Use the repeat function to log the string "Hello, world!" to the console
