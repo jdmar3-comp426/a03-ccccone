@@ -86,5 +86,14 @@ export function searchName(car_data, searchTerm) {
  * @returns {[]} an array of car objects
  */
 export function searchByYear(car_data, years) {
-
+    let candidates = car_data.reduce(function(acc, obj) {
+        if (obj.yesr = years) {
+            acc.push(obj);
+        }
+        return acc;
+    }, []);
+    candidates.sort(function(a, b) {
+        return a.year - b.year;
+    });
+    return candidates;
 }
