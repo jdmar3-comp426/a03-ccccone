@@ -193,6 +193,6 @@ function avgMpgByYearAndHybridCal(mpg_data){
         'notHybrid': null,
     }
 
-    ret = Object.assign(sumOrder, sum);
+    let ret = Object.assign(sumOrder, sum);
     return ret;
 }
